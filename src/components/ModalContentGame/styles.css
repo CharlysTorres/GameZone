@@ -1,0 +1,27 @@
+.card-modal-game {
+  width: 480px;
+  padding: 22px;
+}
+
+.content-game {
+  padding: 0 20px;
+}
+
+.rule {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  line-height: normal;
+  margin: 8px;
+}
+
+.rule span {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.card-footer-modal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}

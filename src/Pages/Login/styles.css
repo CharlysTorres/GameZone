@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: #F2F3F5;
+  width: 100vw;
+}
+.left-side {
+  flex: 1;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.left-side p {
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: large;
+  color: #999CAE;
+  padding: 0 20px;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F2F3F5;
+}
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo img {
+  width: 100px;
+  max-width: 100%;
+}
+.logo h2 {
+  margin-top: 18px;
+  margin-bottom: 0px;
+}
+input[type="email"], input[type="password"], input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.forgot-password, .signup {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.image-container {
+  text-align: center;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.or-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+/* @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-side, .right-side {
+    flex: none;
+    width: 100%;
+  }
+  .left-side {
+    order: 2;
+    padding: 20px;
+  }
+  .right-side {
+    order: 1;
+    padding: 20px;
+  }
+  .login-form {
+    padding: 20px;
+  }
+} */
+
+@media (min-width: 1280px) {
+  .login-form {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-form {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-form {
+    max-width: 350px;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    padding: 0 20px;
+  }
+}

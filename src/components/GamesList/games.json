@@ -1,0 +1,907 @@
+[
+  {
+    "id": 1,
+    "name": "Damas",
+    "description": "Um jogo de tabuleiro clássico para dois jogadores em que o objetivo é capturar todas as peças do oponente ou deixá-lo sem movimentos.",
+    "objective": " Capturar todas as peças adversárias ou bloquear seus movimentos, impedindo-as de se mover.",
+    "category": "Estratégia",
+    "icon": "checkers.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador começa com 12 peças em um tabuleiro 8x8."
+      },
+      {
+        "step": 2,
+        "description": "As peças se movem diagonalmente em direção ao lado do adversário."
+      },
+      {
+        "step": 3,
+        "description": "Captura-se uma peça do adversário ao pular sobre ela."
+      },
+      {
+        "step": 4,
+        "description": "Uma peça que chega ao lado oposto do tabuleiro vira uma 'Dama' e pode se mover em qualquer direção diagonal."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 10,
+        "title": "Quantas peças cada jogador começa em Damas?",
+        "questions": [
+          {"id": 1, "title": "12"},
+          {"id": 2, "title": "15"},
+          {"id": 3, "title": "10"},
+          {"id": 4, "title": "8"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 15,
+        "title": "Qual o movimento permitido para capturar uma peça adversária?",
+        "questions": [
+          {"id": 1, "title": "Mover na diagonal e pular sobre a peça adversária."},
+          {"id": 2, "title": "Mover na diagonal e pular sobre a peça adversária e capturar."},
+          {"id": 3, "title": "Mover na vertical para a direita e pular sobre a peça adversária."},
+          {"id": 4, "title": "Mover na horizontal para a esquerda e pular sobre a peça adversária."}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 20,
+        "title": "O que acontece quando uma peça chega à última fileira do oponente?",
+        "questions": [
+          {"id": 1, "title": "Ela é removida do jogo."},
+          {"id": 2, "title": "Ela se torna uma dama."},
+          {"id": 3, "title": "Ela captura todas as peças do adversário."},
+          {"id": 4, "title": "Nada acontece."}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "12",
+      "2": "Mover na diagonal e pular sobre a peça adversária e capturar.",
+      "3": "Ela se torna uma dama."
+    }
+  },
+  {
+    "id": 2,
+    "name": "Xadrez",
+    "description": "Um jogo de estratégia de dois jogadores em que o objetivo é dar xeque-mate ao rei do adversário.",
+    "objective": "Dar xeque-mate ao rei adversário, colocando-o em uma posição na qual não pode se mover sem ser capturado, independentemente de seus movimentos. Objetivo secundário é capturar as peças adversárias para enfraquecer a posição do oponente.",
+    "category": "Estratégia",
+    "icon": "chess1.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador começa com 16 peças distribuídas em um tabuleiro 8x8."
+      },
+      {
+        "step": 2,
+        "description": "O objetivo é capturar o rei adversário, dando xeque-mate."
+      },
+      {
+        "step": 3,
+        "description": "As peças se movem de maneiras diferentes: peões, torres, bispos, cavalos, rainha e rei."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 20,
+        "title": "Quantas peças cada jogador tem no início do jogo?",
+        "questions": [
+          {"id": 1, "title": "20"},
+          {"id": 2, "title": "13"},
+          {"id": 3, "title": "16"},
+          {"id": 4, "title": "18"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 18,
+        "title": "Como se chama a vitória no xadrez?",
+        "questions": [
+          {"id": 1, "title": "Chá-mate"},
+          {"id": 2, "title": "Cheque-mate"},
+          {"id": 3, "title": "Xeque-mate"},
+          {"id": 4, "title": "Nenhuma das Respostas"}
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Qual peça pode se mover em qualquer direção e quantas casas quiser?",
+        "xp": 12,
+        "questions": [
+          {"id": 1, "title": "Bispo"},
+          {"id": 2, "title": "Torre"},
+          {"id": 3, "title": "Cavalo"},
+          {"id": 4, "title": "Rainha"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "16",
+      "2": "Xeque-mate",
+      "3": "Rainha"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Truco",
+    "description": "O truco é um jogo de cartas brasileiro que combina estratégia, blefe e um pouco de sorte. Muito popular em todo o país, ele é conhecido por sua dinâmica rápida e pelas emoções que proporciona. Um jogo de cartas popular em muitos países, jogado por duas equipes de dois jogadores, com o objetivo de vencer rodadas apostando pontos.",
+    "category": "Cartas",
+    "objective": "O objetivo principal do truco é chegar a 12 pontos antes do time adversário. Os pontos são conquistados através das chamadas 'mãos', que valem 1 ponto cada.",
+    "icon": "truco.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "O jogo é jogado com um baralho reduzido de 40 cartas."
+      },
+      {
+        "step": 2,
+        "description": "As cartas são distribuídas três para cada jogador."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é ganhar duas das três rodadas."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 15,
+        "title": "Quantas cartas são distribuídas para cada jogador?",
+        "questions": [
+          {"id": 1, "title": "5"},
+          {"id": 2, "title": "3"},
+          {"id": 3, "title": "4"},
+          {"id": 4, "title": "6"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 22,
+        "title": "Qual o número total de cartas no baralho de Truco?",
+        "questions": [
+          {"id": 1, "title": "40"},
+          {"id": 2, "title": "30"},
+          {"id": 3, "title": "20"},
+          {"id": 4, "title": "50"}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 24,
+        "title": "Quantas rodadas precisam ser vencidas para ganhar?",
+        "questions": [
+          {"id": 1, "title": "3"},
+          {"id": 2, "title": "4"},
+          {"id": 3, "title": "2"},
+          {"id": 4, "title": "1"}
+        ]
+      },
+      {
+        "id": 4,
+        "xp": 29,
+        "title": "Qual o objetivo do jogo de Truco?",
+        "questions": [
+          {"id": 1, "title": "Ter amaior quantidade de cartas"},
+          {"id": 2, "title": "Ganhar 2 das 3 rodadas"},
+          {"id": 3, "title": "Ter a carta com maior valor"},
+          {"id": 4, "title": "Todas as respostas estão corretas"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "3",
+      "2": "40",
+      "3": "2",
+      "4": "Ganhar 2 das 3 rodadas"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dominó",
+    "description": "Um jogo de blocos onde o objetivo é ser o primeiro a se livrar de todas as suas pedras.",
+    "objective": "O objetivo principal do dominó é ser o primeiro jogador a se livrar de todas as suas peças. Em algumas variações, o objetivo pode ser alcançar uma determinada pontuação ao final da partida.",
+    "category": "Estratégia",
+    "icon": "domino.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador começa com 7 pedras."
+      },
+      {
+        "step": 2,
+        "description": "O objetivo é combinar as extremidades das pedras que estão no jogo."
+      },
+      {
+        "step": 3,
+        "description": "Ganha o jogador que se livrar de todas as suas pedras primeiro."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 12,
+        "title": "Quantas pedras cada jogador começa em uma partida de Dominó?",
+        "questions": [
+          {"id": 1, "title": "9"},
+          {"id": 2, "title": "7"},
+          {"id": 3, "title": "3"},
+          {"id": 4, "title": "5"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 15,
+        "title": "O que os jogadores precisam combinar para jogar suas pedras?",
+        "questions": [
+          {"id": 1, "title": "A soma das pedras."},
+          {"id": 2, "title": "A cor das pedras."},
+          {"id": 3, "title": "As extremidades das pedras."},
+          {"id": 4, "title": "Todas estão corretas."}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 9,
+        "title": "Como se vence no Dominó?",
+        "questions": [
+          {"id": 1, "title": "Se livrando de todas as pedras."},
+          {"id": 2, "title": "Obtendo o maior número de pedras."},
+          {"id": 3, "title": "Somando o maior número em suas extremidades."},
+          {"id": 4, "title": "Nunhuma das respostas."}
+        ]
+      },
+      {
+        "id": 4,
+        "xp": 25,
+        "title": "Quantas pedras tem no total do dominó?",
+        "questions": [
+          {"id": 1, "title": "28"},
+          {"id": 2, "title": "21"},
+          {"id": 3, "title": "30"},
+          {"id": 4, "title": "35"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "7",
+      "2": "As extremidades das pedras.",
+      "3": "Se livrando de todas as pedras.",
+      "4": "28"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Uno",
+    "description": "Um jogo de cartas popular onde o objetivo é ser o primeiro a descartar todas as suas cartas com base em cores e números.",
+    "objective": "Seja o primeiro jogador a se livrar de todas as suas cartas em cada rodada e ganhe pontos pelas cartas que sobram em poder dos seus adversários. Os pontos de cada rodada vão sendo acumulados e o primeiro jogador a fazer 500 pontos será o vencedor",
+    "category": "Cartas",
+    "icon": "uno.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador começa com 7 cartas."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores devem combinar a carta descartada com base na cor ou número."
+      },
+      {
+        "step": 3,
+        "description": "Se um jogador não puder jogar, ele deve comprar uma carta do monte."
+      },
+      {
+        "step": 4,
+        "description": "Ganha o primeiro jogador a se livrar de todas as suas cartas."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 18,
+        "title": "Quantas cartas cada jogador começa em uma partida de Uno?",
+        "questions": [
+          {"id": 1, "title": "7"},
+          {"id": 2, "title": "5"},
+          {"id": 3, "title": "3"},
+          {"id": 4, "title": "9"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 15,
+        "title": "Como se vence no Uno?",
+        "questions": [
+          {"id": 1, "title": "Se livrar de todas as suas cartas."},
+          {"id": 2, "title": "Combinar a carta descartada com base na cor ou número."},
+          {"id": 3, "title": "Ganhar 20 cartas."},
+          {"id": 4, "title": "Nunhuma das respostas."}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 20,
+        "title": "Quantas cartas tem no total do Uno?",
+        "questions": [
+          {"id": 1, "title": "108"},
+          {"id": 2, "title": "105"},
+          {"id": 3, "title": "100"},
+          {"id": 4, "title": "110"}
+        ]
+      },
+      {
+        "id": 4,
+        "xp": 11,
+        "title": "Como os jogadores devem combinar suas cartas?",
+        "questions": [
+          {"id": 1, "title": "Apenas por números."},
+          {"id": 2, "title": "Apenas por cor."},
+          {"id": 3, "title": "Por cor e número."},
+          {"id": 4, "title": "Todas estão corretas."}
+        ]
+      },
+      {
+        "id": 5,
+        "xp": 9,
+        "title": "O que acontece se um jogador não puder jogar uma carta?",
+        "questions": [
+          {"id": 1, "title": "Nada acontece."},
+          {"id": 2, "title": "Ele deve comprar uma carta do monte."},
+          {"id": 3, "title": "Ele deve comprar duas cartas do monte."},
+          {"id": 4, "title": "Ele passa a vez."}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "7",
+      "2": "Se livrar de todas as suas cartas.",
+      "3": "108",
+      "4": "Por cor ou número.",
+      "5": "Ele deve comprar uma carta do monte."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Poker",
+    "description": "Um jogo de cartas baseado em apostas, blefes e estratégia, em que o objetivo é ganhar as fichas dos adversários.",
+    "objective": "O objetivo principal do poker é vencer o pote, que é a soma de todas as apostas feitas pelos jogadores durante uma mão. Para vencer, o jogador precisa ter a melhor combinação de cartas ou fazer com que os outros jogadores desistam da mão.",
+    "category": "Cartas",
+    "icon": "poker.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador recebe duas cartas ocultas e cinco cartas comunitárias são dispostas na mesa."
+      },
+      {
+        "step": 2,
+        "description": "O objetivo é formar a melhor combinação de cinco cartas."
+      },
+      {
+        "step": 3,
+        "description": "Os jogadores apostam ou desistem com base na força de sua mão."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 25,
+        "title": "Quantas cartas ocultas cada jogador recebe?",
+        "questions": [
+          {"id": 1, "title": "3"},
+          {"id": 2, "title": "2"},
+          {"id": 3, "title": "4"},
+          {"id": 4, "title": "5"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "Qual é o objetivo principal no Poker?",
+        "questions": [
+          {"id": 1, "title": "Fazer truques"},
+          {"id": 2, "title": "Formar a melhor mão de 5 cartas"},
+          {"id": 3, "title": "Blefar sempre"},
+          {"id": 4, "title": "Fazer sequência de cartas"}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 14,
+        "title": "O que acontece se um jogador não apostar?",
+        "questions": [
+          {"id": 1, "title": "Desiste da rodada"},
+          {"id": 2, "title": "É eliminado do jogo"},
+          {"id": 3, "title": "Compra mais cartas"},
+          {"id": 4, "title": "Não acontece nada"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "2",
+      "2": "Formar a melhor mão de 5 cartas",
+      "3": "Desiste da rodada"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Paciência",
+    "description": "Um jogo de cartas solo em que o objetivo é organizar as cartas em ordem crescente e separá-las por naipes.",
+    "objective": "O objetivo principal da paciência é organizar todas as cartas em quatro pilhas, uma de cada naipe (copas, paus, ouros e espadas), em ordem crescente, do ás ao rei.",
+    "category": "Cartas",
+    "icon": "paciencia.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "As cartas são dispostas em sete colunas, com a primeira coluna contendo uma carta, a segunda duas, e assim por diante."
+      },
+      {
+        "step": 2,
+        "description": "O objetivo é mover as cartas para as fundações, começando com o Ás."
+      },
+      {
+        "step": 3,
+        "description": "As cartas podem ser movidas entre as colunas em ordem decrescente, alternando as cores."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 10,
+        "title": "Quantas colunas iniciais há no Paciência?",
+        "questions": [
+          {"id": 1, "title": "6"},
+          {"id": 2, "title": "7"},
+          {"id": 3, "title": "8"},
+          {"id": 4, "title": "9"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 12,
+        "title": "Qual é o objetivo final no Paciência?",
+        "questions": [
+          {"id": 1, "title": "Organizar as cartas em ordem crescente por naipe"},
+          {"id": 2, "title": "Eliminar todas as cartas da mesa"},
+          {"id": 3, "title": "Fazer pares de cartas iguais"},
+          {"id": 4, "title": "Criar sequências decrescentes"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "7",
+      "2": "Organizar as cartas em ordem crescente por naipe"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Batalha Naval",
+    "description": "Um jogo de tabuleiro para dois jogadores, em que o objetivo é afundar todos os navios do oponente ao adivinhar suas localizações.",
+    "objective": "O objetivo principal da Batalha Naval é afundar todos os navios do oponente ao adivinhar suas localizações.",
+    "category": "Estratégia",
+    "icon": "batalha-naval.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador posiciona seus navios em uma grade de 10x10, sem que o oponente veja."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores alternam turnos, adivinhando coordenadas para tentar acertar os navios adversários."
+      },
+      {
+        "step": 3,
+        "description": "O jogo termina quando todos os navios de um dos jogadores são afundados."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 15,
+        "title": "Qual o tamanho da grade em Batalha Naval?",
+        "questions": [
+          {"id": 1, "title": "8x8"},
+          {"id": 2, "title": "10x10"},
+          {"id": 3, "title": "12x12"},
+          {"id": 4, "title": "6x6"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 18,
+        "title": "Qual é o objetivo do jogo?",
+        "questions": [
+          {"id": 1, "title": "Acertar todas as coordenadas"},
+          {"id": 2, "title": "Afundar todos os navios do adversário"},
+          {"id": 3, "title": "Evitar que seu oponente acerte seus navios"},
+          {"id": 4, "title": "Adivinhar todas as coordenadas vazias"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "10x10",
+      "2": "Afundar todos os navios do adversário"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dungeons and Dragons",
+    "description": "Um RPG de mesa em que os jogadores assumem o papel de heróis em aventuras épicas em um mundo de fantasia.",
+    "objective": "O objetivo principal de Dungeons & Dragons (D&D) é proporcionar uma experiência narrativa imersiva e colaborativa. Ao contrário de jogos de tabuleiro tradicionais, onde o objetivo é vencer, em D&D o foco está em contar histórias em um mundo de fantasia.",
+    "category": "RPG",
+    "icon": "D&D.svg",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores criam personagens com habilidades específicas e jogam como um grupo de aventureiros."
+      },
+      {
+        "step": 2,
+        "description": "Um Mestre do Jogo (Dungeon Master) narra a história e controla os desafios."
+      },
+      {
+        "step": 3,
+        "description": "Os jogadores rolam dados para determinar o sucesso ou fracasso de suas ações."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 30,
+        "title": "Quem controla a história em Dungeons and Dragons?",
+        "questions": [
+          {"id": 1, "title": "Jogadores"},
+          {"id": 2, "title": "Dungeon Master"},
+          {"id": 3, "title": "Narrador"},
+          {"id": 4, "title": "Regras"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 25,
+        "title": "O que os jogadores usam para determinar o sucesso de suas ações?",
+        "questions": [
+          {"id": 1, "title": "Cartas"},
+          {"id": 2, "title": "Tabuleiro"},
+          {"id": 3, "title": "Dados"},
+          {"id": 4, "title": "Fichas"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Dungeon Master",
+      "2": "Dados"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Palavras Cruzadas",
+    "description": "Um jogo de palavras em que os jogadores devem completar uma grade com palavras que se cruzam usando pistas fornecidas.",
+    "objective": "O Objetivo das Palavras Cruzadas O objetivo principal das palavras cruzadas é preencher um grid com letras, formando palavras que se cruzam horizontal e verticalmente, seguindo as pistas fornecidas. É como um quebra-cabeça verbal onde você precisa usar seu vocabulário, lógica e raciocínio dedutivo para descobrir as palavras corretas.",
+    "category": "Tabuleiro",
+    "icon": "palavras-cruzadas.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "O jogador recebe uma grade e pistas para completar as palavras."
+      },
+      {
+        "step": 2,
+        "description": "As palavras devem se cruzar corretamente na grade."
+      },
+      {
+        "step": 3,
+        "description": "O jogo termina quando todas as palavras são inseridas corretamente."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 10,
+        "title": "Como as palavras devem ser inseridas na grade?",
+        "questions": [
+          {"id": 1, "title": "Em qualquer ordem"},
+          {"id": 2, "title": "Apenas na horizontal"},
+          {"id": 3, "title": "Devem se cruzar corretamente"},
+          {"id": 4, "title": "Somente na vertical"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 12,
+        "title": "Como o jogador recebe as pistas?",
+        "questions": [
+          {"id": 1, "title": "Por sorteio"},
+          {"id": 2, "title": "Elas vêm no tabuleiro"},
+          {"id": 3, "title": "São fornecidas no início do jogo"},
+          {"id": 4, "title": "São dadas por outros jogadores"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Devem se cruzar corretamente",
+      "2": "São fornecidas no início do jogo"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Mau-Mau",
+    "description": "Um jogo de cartas em que o objetivo é ser o primeiro a descartar todas as cartas, combinando-as por cor ou número.",
+    "objective": "O objetivo principal do jogo Mau Mau é se livrar de todas as cartas da sua mão antes dos outros jogadores. É um jogo de cartas simples e divertido que exige um pouco de estratégia e sorte. A cada rodada, os jogadores descartam cartas seguindo regras específicas, como jogar uma carta do mesmo número ou naipe da carta que está virada para cima na mesa.",
+    "category": "Cartas",
+    "icon": "mau-mau.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador recebe 7 cartas."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores devem combinar a carta do topo do monte por cor ou número."
+      },
+      {
+        "step": 3,
+        "description": "Cartas especiais podem mudar a cor ou fazer o próximo jogador comprar cartas."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 10,
+        "title": "Quantas cartas cada jogador recebe?",
+        "questions": [
+          {"id": 1, "title": "5"},
+          {"id": 2, "title": "7"},
+          {"id": 3, "title": "9"},
+          {"id": 4, "title": "6"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 12,
+        "title": "Como as cartas devem ser combinadas?",
+        "questions": [
+          {"id": 1, "title": "Por naipe"},
+          {"id": 2, "title": "Por número ou cor"},
+          {"id": 3, "title": "Por número apenas"},
+          {"id": 4, "title": "Por cor apenas"}
+        ]
+      },
+      {
+        "id": 3,
+        "xp": 14,
+        "title": "Qual efeito tem uma carta especial?",
+        "questions": [
+          {"id": 1, "title": "Comprar 1 carta"},
+          {"id": 2, "title": "Mudar a cor ou fazer o jogador comprar cartas"},
+          {"id": 3, "title": "Mudar de direção"},
+          {"id": 4, "title": "Pular a vez"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "7",
+      "2": "Por número ou cor",
+      "3": "Mudar a cor ou fazer o jogador comprar cartas"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Buraco",
+    "description": "Um jogo de cartas jogado em duplas, onde o objetivo é formar canastras e somar mais pontos que os adversários.",
+    "objective": "O objetivo principal do Buraco é fazer o maior número de pontos possível através da formação de 'canastras' e 'jogos'. Uma canastra é um conjunto de sete ou mais cartas do mesmo naipe (sequência) ou do mesmo valor (grupo). Já um jogo é um conjunto menor de cartas, geralmente usado para complementar as canastras ou para se livrar de cartas indesejadas.",
+    "category": "Cartas",
+    "icon": "buraco.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador recebe 11 cartas."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores tentam formar trincas e canastras com suas cartas."
+      },
+      {
+        "step": 3,
+        "description": "O jogo termina quando um jogador bate, descartando sua última carta."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 18,
+        "title": "Quantas cartas são distribuídas a cada jogador?",
+        "questions": [
+          {"id": 1, "title": "11"},
+          {"id": 2, "title": "12"},
+          {"id": 3, "title": "10"},
+          {"id": 4, "title": "15"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "Qual o objetivo principal do jogo?",
+        "questions": [
+          {"id": 1, "title": "Fazer canastras"},
+          {"id": 2, "title": "Comprar todas as cartas"},
+          {"id": 3, "title": "Formar trincas apenas"},
+          {"id": 4, "title": "Descarte todas as cartas primeiro"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "11",
+      "2": "Fazer canastras"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Tiny Epic Dungeons",
+    "description": "Um jogo de exploração de masmorras cooperativo onde os jogadores enfrentam monstros e armadilhas em busca do chefe final.",
+    "objective": "Em Tiny Epic Dungeons, o objetivo principal é guiar um grupo de heróis através de uma masmorra perigosíssima, derrotar o chefe final e completar a missão. É um jogo cooperativo onde todos os jogadores trabalham juntos para alcançar um objetivo comum. A cada partida, a masmorra é gerada de forma aleatória, oferecendo uma experiência única e desafiadora.",
+    "category": "RPG",
+    "icon": "tiny-epic-dungeons.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores exploram uma masmorra, revelando novas salas ao se moverem."
+      },
+      {
+        "step": 2,
+        "description": "Cada sala pode conter monstros, armadilhas ou tesouros."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo final é derrotar o chefe da masmorra para vencer o jogo."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 22,
+        "title": "Qual o objetivo principal de Tiny Epic Dungeons?",
+        "questions": [
+          {"id": 1, "title": "Explorar a masmorra"},
+          {"id": 2, "title": "Derrotar o chefe da masmorra"},
+          {"id": 3, "title": "Encontrar tesouros"},
+          {"id": 4, "title": "Evitar armadilhas"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 18,
+        "title": "O que pode ser encontrado em cada sala?",
+        "questions": [
+          {"id": 1, "title": "Monstros e tesouros"},
+          {"id": 2, "title": "Apenas tesouros"},
+          {"id": 3, "title": "Apenas armadilhas"},
+          {"id": 4, "title": "Monstros, armadilhas ou tesouros"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Derrotar o chefe da masmorra",
+      "2": "Monstros, armadilhas ou tesouros"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Quartz",
+    "description": "Um jogo competitivo de mineração em que os jogadores tentam coletar as pedras mais valiosas sem encontrar quartzos fraturados.",
+    "objective": "Em Quartz, o objetivo principal é se tornar o anão mais rico, explorando uma mina e vendendo os cristais preciosos que você encontrar. Você irá competir com outros jogadores para extrair a maior quantidade de cristais e obter o maior lucro ao longo de cinco dias de trabalho. É um jogo de estratégia e gestão de recursos, onde cada decisão pode impactar significativamente o seu sucesso.",
+    "category": "Estratégia",
+    "icon": "quartz.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores se revezam puxando gemas de um saco, tentando acumular as mais valiosas."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores podem escolher sair da mina a qualquer momento para proteger suas gemas."
+      },
+      {
+        "step": 3,
+        "description": "Se um jogador puxar dois quartzos fraturados, ele perde todas as suas gemas daquela rodada."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 16,
+        "title": "O que os jogadores tentam evitar ao puxar gemas?",
+        "questions": [
+          {"id": 1, "title": "Diamantes"},
+          {"id": 2, "title": "Quartzos fraturados"},
+          {"id": 3, "title": "Safiras"},
+          {"id": 4, "title": "Rubis"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "O que acontece se um jogador puxar dois quartzos fraturados?",
+        "questions": [
+          {"id": 1, "title": "Ganha pontos extras"},
+          {"id": 2, "title": "Perde todas as gemas daquela rodada"},
+          {"id": 3, "title": "Pula a próxima rodada"},
+          {"id": 4, "title": "Troca suas gemas com outro jogador"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Quartzos fraturados",
+      "2": "Perde todas as gemas daquela rodada"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Detetive",
+    "description": "Um jogo de mistério e investigação em que os jogadores assumem o papel de detetives tentando resolver crimes complexos.",
+    "objective": "No jogo Detetive, o objetivo principal é desvendar um mistério: descobrir quem cometeu um crime, qual arma foi utilizada e em qual local o crime ocorreu. Em outras palavras, você se torna um detetive e precisa investigar um caso para encontrar as respostas para as seguintes perguntas: /n - Quem: Quem é o assassino? /n - Com o quê: Qual arma foi usada para cometer o crime? /n - Onde: Em qual local o crime aconteceu?",
+    "category": "Investigação",
+    "icon": "detetive.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores investigam pistas, interagem com personagens e tentam solucionar o caso."
+      },
+      {
+        "step": 2,
+        "description": "Cada caso apresenta uma série de eventos e informações que os jogadores devem conectar."
+      },
+      {
+        "step": 3,
+        "description": "O jogo termina quando os jogadores apresentam uma solução para o caso."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 25,
+        "title": "Qual o objetivo principal em Detetive?",
+        "questions": [
+          {"id": 1, "title": "Prender suspeitos"},
+          {"id": 2, "title": "Resolver o caso"},
+          {"id": 3, "title": "Coletar pistas"},
+          {"id": 4, "title": "Interrogar personagens"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 22,
+        "title": "O que os jogadores precisam fazer para resolver o caso?",
+        "questions": [
+          {"id": 1, "title": "Conectar eventos e informações"},
+          {"id": 2, "title": "Prender o suspeito correto"},
+          {"id": 3, "title": "Identificar todas as pistas"},
+          {"id": 4, "title": "Seguir todos os personagens"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Resolver o caso",
+      "2": "Conectar eventos e informações"
+    }
+  }
+]

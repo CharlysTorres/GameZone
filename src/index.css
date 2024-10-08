@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFF;
+  --background: #F2F3F5;
+  --gray-line: #DCDDE0;
+  --text: #666666;
+  --text-highlight: #B3B9FF;
+  --title: #2E384D;
+  --red: #E83F5B;
+  --green: #4CD62B;
+  --blue: #5965E0;
+  --blue-dark: #4953B8;
+  --blue-twitter: #2AA9E0;
+  --violet: #7c4dff;
+  --sb-track-color: #f9fafb;
+  --sb-thumb-color: #a78bfa;
+  --sb-size: 1px;
+  /* disable the trail */
+  --toastify-color-progress-bgo: 0;
+
+  /* increase the opacity */
+  --toastify-color-progress-bgo: .8;
+}
+
+.Toastify__toast-body {
+  display: flex;
+  width: 300px;
+}
+
+.Toastify__close-button {
+  width: 16px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--title);
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.scroll-y::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+.scroll-y::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 2px;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 2px;
+}
+
+.scroll-y-transparent {
+  overflow-y: scroll;
+}
+
+.scroll-y-transparent::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.scroll-y-transparent::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.scroll-y-transparent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.scroll-x-transparent {
+  overflow-x: scroll;
+}
+
+.scroll-x-transparent::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.scroll-x-transparent::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.scroll-x-transparent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
+}
+
+html {
+  font-family: "Rajdhani", sans-serif;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .header {
+    padding: 0 1rem;
+  }
+}
+
+.active-icon-header {
+  color: #5965E0
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}

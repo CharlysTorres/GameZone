@@ -1,0 +1,219 @@
+.container-leaderboard {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container-leaderboard section {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+.header-leaderboard h3 {
+  margin-bottom: 2.5rem;
+  color: var(--title);
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.sub-header-leaderboard {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.block-leaderboard {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.block-leaderboard span {
+  color: var(--text);
+  font-weight: bold;
+  opacity: .6;
+  font-size: .75rem;
+}
+
+.container-leaderboard-item {
+  display: flex;
+  margin-top: 5px;
+}
+
+.container-leaderboard-item strong {
+  color: var(--blue);
+}
+
+.level-item {
+  width: 72px;
+  height: 96px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.user-item {
+  flex: 1;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 96px;
+  display: flex;
+  padding-left: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-item .userPicture-item {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background-size: cover;
+  background-position: center;
+}
+
+.userDescription-item {
+  margin-left: 20px;
+}
+
+.userDescription-item p {
+  color: var(--title);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userDescription-item span {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.userDescription-item img {
+  width: 14px;
+  margin-right: 5px;
+}
+
+.challanges-item {
+  width: 140px;
+  background-color: white;
+  height: 96px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+.xp-item {
+  width: 140px;
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 96px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+@media (min-width: 1280px) {
+  
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (max-width: 640px) {
+  .header-leaderboard h3 {
+    margin-bottom: 1.25rem;
+    font-size: large;
+  }
+  .container-leaderboard {
+    padding: 0 10px;
+  }
+  .container-leaderboard-item {
+    width: 300px;
+  }
+
+  .sub-header-leaderboard {
+    margin-right: 0px;
+  }
+
+  .block-leaderboard {
+    display: flex;
+    gap: 1.75rem;
+  }
+  
+  .block-leaderboard span {
+    font-size: .6rem;
+  }
+
+  .level-item {
+    width: 32px;
+    height: 46px;
+    border-radius: 2.5px;
+    margin-right: 2.5px;
+  }
+  .user-item {
+    height: 46px;
+    padding-left: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
+  }
+  .user-item .userPicture-item {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+  }
+  .userDescription-item {
+    margin-left: 10px;
+  }
+  
+  .userDescription-item p {
+    color: var(--title);
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .userDescription-item span {
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .userDescription-item img {
+    width: 7px;
+    margin-right: 2.5px;
+  }
+
+  .challanges-item {
+    width: 70px;
+    height: 46px;
+    font-size: 10px;
+  }
+  
+  .xp-item {
+    width: 70px;
+    border-top-right-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    height: 46px;
+    font-size: 10px;
+  }
+}

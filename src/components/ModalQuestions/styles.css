@@ -1,0 +1,118 @@
+.modal-questions {
+  width: 480px;
+  padding: 22px;
+}
+
+.modal-question-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-question-header span {
+  font-size: x-large;
+  color: var(--violet);
+  font-weight: bold;
+  margin: 8px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray-line);
+}
+
+.modal-question-icon {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-question-icon img {
+  width: 64px;
+  height: 64px;
+}
+
+.question-radios {
+  --_clr-primary: #666;
+  --_clr-hover: #8b5cf6;
+  --_clr-checked: var(--violet);
+}
+
+.question-radios > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  --_clr-current: var(--_clr-primary)
+}
+
+.question-radios > div + div {
+  margin-block-start: 0.5rem;
+}
+
+.question-radios label {
+  cursor: pointer;
+  color: var(--_clr-current);
+  transition: color 150ms ease-in-out;
+}
+
+.question-radios input[type="radio"] {
+  appearance: none;
+  outline: none;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--_clr-current);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.question-radios input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;
+  opacity: 0;
+  scale: 0;
+  transition:
+    opacity 150ms ease-in-out,
+    scale 150ms ease-in-out;
+  background-color: var(--_clr-checked);
+  border-radius: inherit;
+}
+
+.question-radios label:hover,
+.question-radios input[type="radio"]:focus-visible,
+.question-radios input[type="radio"]:focus-visible + label,
+.question-radios input[type="radio"]:hover,
+.question-radios input[type="radio"]:hover + label {
+  --_clr-current: var(--_clr-hover);
+}
+.question-radios input[type="radio"]:focus-visible::after,
+.question-radios input[type="radio"]:hover::after {
+  opacity: 0.5;
+  scale: 1;
+  background-color: var(--_clr-hover);
+}
+
+.question-radios input[type="radio"]:checked + label:not(:hover),
+.question-radios input[type="radio"]:checked:not(:hover) {
+  --_clr-current: var(--_clr-checked);
+}
+.question-radios input[type="radio"]:checked::after {
+  opacity: 1;
+  scale: 1;
+}
+
+.card-footer-modal-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}

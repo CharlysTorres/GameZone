@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Estratégia",
+    "icon": "chess.svg"
+  },
+  {
+    "id": 2,
+    "title": "Cartas",
+    "icon": "carts.svg"
+  },
+  {
+    "id": 3,
+    "title": "Tabuleiro",
+    "icon": "dices.svg"
+  },
+  {
+    "id": 4,
+    "title": "RPG",
+    "icon": "rpg.svg"
+  },
+  {
+    "id": 5,
+    "title": "Aventura",
+    "icon": "backpack.svg"
+  }
+]
