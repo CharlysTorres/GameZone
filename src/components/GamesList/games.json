@@ -858,7 +858,7 @@
     "name": "Detetive",
     "description": "Um jogo de mistério e investigação em que os jogadores assumem o papel de detetives tentando resolver crimes complexos.",
     "objective": "No jogo Detetive, o objetivo principal é desvendar um mistério: descobrir quem cometeu um crime, qual arma foi utilizada e em qual local o crime ocorreu. Em outras palavras, você se torna um detetive e precisa investigar um caso para encontrar as respostas para as seguintes perguntas: /n - Quem: Quem é o assassino? /n - Com o quê: Qual arma foi usada para cometer o crime? /n - Onde: Em qual local o crime aconteceu?",
-    "category": "Investigação",
+    "category": "Aventura",
     "icon": "detetive.svg",
     "indication": 2,
     "rules": [
@@ -903,5 +903,515 @@
       "1": "Resolver o caso",
       "2": "Conectar eventos e informações"
     }
-  }
+  },
+  {
+    "id": 16,
+    "name": "Wonderland's War",
+    "description": "Um jogo de estratégia ambientado no País das Maravilhas, onde os jogadores competem por controle de territórios e acumulam poder através de combate e alianças.",
+    "objective": "Se tornar o mais novo regente de Wordeland",
+    "category": "Estratégia",
+    "icon": "wonderlands-war.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem um líder de facção e recebem habilidades especiais."
+      },
+      {
+        "step": 2,
+        "description": "Durante a fase de preparação, os jogadores formam alianças e acumulam cartas e poder."
+      },
+      {
+        "step": 3,
+        "description": "Na fase de guerra, os jogadores combatem para conquistar territórios."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 20,
+        "title": "Quantas fases tem o jogo?",
+        "question": [
+          {"id": 1, "title": "2"},
+          {"id": 2, "title": "3"},
+          {"id": 3, "title": "4"},
+          {"id": 4, "title": "5"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 25,
+        "title": "Qual o objetivo principal do jogo?",
+        "questions": [
+          {"id": 1, "title": "Formar alianças"},
+          {"id": 2, "title": "Acumular cartas"},
+          {"id": 3, "title": "Conquistar territórios"},
+          {"id": 4, "title": "Ganhar poderes especiais"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "3",
+      "2": "Conquistar territórios"
+    }
+  },
+  {
+    "id": 17,
+    "name": "The Witcher: Old World",
+    "description": "Um jogo de aventura baseado no universo de The Witcher, onde os jogadores assumem o papel de bruxos em treinamento, lutando contra monstros e tomando decisões importantes.",
+    "objective": "Jogo de mundo aberto onde você deve competir com outros bruxos para saber qual bruxo é o mais poderoso. Onde você completa missões, caça monstros medita e conquista moedas e pontos.",
+    "category": "Aventura",
+    "icon": "the-witcher-old-world.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem um bruxo de uma das cinco escolas."
+      },
+      {
+        "step": 2,
+        "description": "Eles exploram o mundo, enfrentam monstros e completam missões."
+      },
+      {
+        "step": 3,
+        "description": "O vencedor é o jogador que acumular o maior número de troféus."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 22,
+        "title": "Quantas escolas de bruxos existem no jogo?",
+        "question": [
+          {"id": 1, "title": "3"},
+          {"id": 2, "title": "4"},
+          {"id": 3, "title": "5"},
+          {"id": 4, "title": "6"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 24,
+        "title": "Qual é o objetivo principal do jogo?",
+        "questions": [
+          {"id": 1, "title": "Completar missões"},
+          {"id": 2, "title": "Acumular troféus"},
+          {"id": 3, "title": "Matar monstros"},
+          {"id": 4, "title": "Explorar o mapa"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "5",
+      "2": "Acumular troféus"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Dune",
+    "description": "é um jogo de tabuleiro que transporta os jogadores para o épico universo de Frank Herbert, colocando-os no centro da luta pelo controle do planeta Arrakis, o único lugar no universo onde se encontra a especiaria Melange, substância vital para a exploração espacial.",
+    "objective": "O objetivo principal do jogo é simples, mas a execução é complexa: dominar o planeta Arrakis e garantir o controle sobre a produção da especiaria.",
+    "category": "Estratégia",
+    "icon": "dune.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem uma das casas nobres e recebem habilidades únicas."
+      },
+      {
+        "step": 2,
+        "description": "O objetivo é controlar as regiões estratégicas de Duna e coletar especiaria."
+      },
+      {
+        "step": 3,
+        "description": "O jogo termina quando um jogador controla 3 fortes no planeta."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 30,
+        "title": "Quantos fortes um jogador precisa controlar para vencer?",
+        "question": [
+          {"id": 1, "title": "2"},
+          {"id": 2, "title": "3"},
+          {"id": 3, "title": "4"},
+          {"id": 4, "title": "5"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 28,
+        "title": "Qual é o recurso mais valioso do jogo?",
+        "questions": [
+          {"id": 1, "title": "Água"},
+          {"id": 2, "title": "Especiaria"},
+          {"id": 3, "title": "Soldados"},
+          {"id": 4, "title": "Tecnologia"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "3",
+      "2": "Especiaria"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Star Wars: Mandalorian Adventures",
+    "description": "Um jogo de aventura e combate, baseado no universo de Star Wars, onde os jogadores assumem o papel de caçadores de recompensas em missões galácticas.",
+    "objective": "Você tem como objetivo inicial completar o objetivo da rodada, podendo se movimentar pelo mapa, atacar os inimigos ou investigar as áreas.",
+    "category": "Aventura",
+    "icon": "star-wars-the-mandalorian-adventures.svg",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem seu caçador de recompensas e preparam suas habilidades e equipamentos."
+      },
+      {
+        "step": 2,
+        "description": "Eles exploram diferentes planetas, enfrentam inimigos e completam missões."
+      },
+      {
+        "step": 3,
+        "description": "O vencedor é o jogador que completa o maior número de missões com sucesso."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 26,
+        "title": "Qual o objetivo principal do jogo?",
+        "question": [
+          {"id": 1, "title": "Derrotar o império"},
+          {"id": 2, "title": "Completar missões"},
+          {"id": 3, "title": "Caçar recompensas"},
+          {"id": 4, "title": "Explorar planetas"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 24,
+        "title": "Qual personagem os jogadores controlam?",
+        "questions": [
+          {"id": 1, "title": "Jedi"},
+          {"id": 2, "title": "Stormtroopers"},
+          {"id": 3, "title": "Caçadores de recompensas"},
+          {"id": 4, "title": "Droides"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Completar missões",
+      "2": "Caçadores de recompensas"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Yu-Gi-Oh!",
+    "description": "Um jogo de cartas onde os jogadores duelam usando monstros, magias e armadilhas, buscando reduzir os pontos de vida do oponente a zero.",
+    "objective": "O objetivo principal do Yu-Gi-Oh! é zerar os pontos de vida do oponente utilizando as cartas de monstros, magia e armadilha à sua disposição.",
+    "icon": "yu-gi-oh.svg",
+    "category": "Cartas",
+    "indication": 1,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Cada jogador começa com 8000 pontos de vida."
+      },
+      {
+        "step": 2,
+        "description": "Os jogadores alternam turnos para invocar monstros e lançar magias e armadilhas."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é reduzir os pontos de vida do oponente a zero."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 18,
+        "title": "Quantos pontos de vida cada jogador tem no início?",
+        "question": [
+          {"id": 1, "title": "4000"},
+          {"id": 2, "title": "6000"},
+          {"id": 3, "title": "8000"},
+          {"id": 4, "title": "10000"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "Qual o objetivo principal do jogo?",
+        "questions": [
+          {"id": 1, "title": "Invocar monstros poderosos"},
+          {"id": 2, "title": "Reduzir os pontos de vida do oponente a zero"},
+          {"id": 3, "title": "Lançar magias"},
+          {"id": 4, "title": "Coletar cartas raras"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "8000",
+      "2": "Reduzir os pontos de vida do oponente a zero"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Descent: Lendas da Escuridão",
+    "description": "Um jogo de aventura cooperativo onde os jogadores assumem o papel de heróis lutando contra monstros em uma campanha narrativa épica para salvar o reino de Terrinoth das forças das trevas.",
+    "category": "Aventura",
+    "icon": "descent-lendas-da-escuridao.svg",
+    "onjective": "Completar a campanha: Os jogadores embarcam em uma narrativa envolvente, enfrentando desafios e superando obstáculos para alcançar os objetivos de cada missão e, por fim, derrotar o mal que assola o reino.",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem heróis, cada um com habilidades e equipamentos únicos."
+      },
+      {
+        "step": 2,
+        "description": "Cada missão envolve exploração de masmorras e combate contra inimigos controlados pela inteligência artificial."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é completar a campanha cooperativamente, sobrevivendo às ameaças."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 25,
+        "title": "Qual o objetivo principal do jogo?",
+        "question": [
+          {"id": 1, "title": "Derrotar o chefe final"},
+          {"id": 2, "title": "Explorar a masmorra"},
+          {"id": 3, "title": "Completar a campanha cooperativamente"},
+          {"id": 4, "title": "Coletar tesouros"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 22,
+        "title": "O que os jogadores enfrentam nas missões?",
+        "questions": [
+          {"id": 1, "title": "Inimigos controlados pela IA"},
+          {"id": 2, "title": "Outros jogadores"},
+          {"id": 3, "title": "Desafios ambientais"},
+          {"id": 4, "title": "Mistérios a resolver"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Completar a campanha cooperativamente",
+      "2": "Inimigos controlados pela IA"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Slay the Spire",
+    "description": "Um jogo de construção de baralhos onde os jogadores lutam para subir uma torre, enfrentando inimigos e escolhendo cartas para fortalecer seu deck.",
+    "objective": "Ascender à torre e derrotar o chefe final. No entanto, a jornada até lá é repleta de decisões estratégicas e desafios que tornam cada partida uma experiência única.",
+    "icon": "slay-the-spire.svg",
+    "category": "Cartas",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem um personagem, cada um com seu próprio baralho inicial."
+      },
+      {
+        "step": 2,
+        "description": "Em cada andar da torre, os jogadores enfrentam inimigos, ganham recompensas e novas cartas."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é alcançar o topo da torre e derrotar o chefe final."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 20,
+        "title": "Qual o objetivo principal do jogo?",
+        "question": [
+          {"id": 1, "title": "Montar o baralho mais poderoso"},
+          {"id": 2, "title": "Derrotar o chefe final"},
+          {"id": 3, "title": "Coletar o maior número de cartas"},
+          {"id": 4, "title": "Sobreviver o máximo de andares possível"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 18,
+        "title": "Como os jogadores adquirem novas cartas?",
+        "questions": [
+          {"id": 1, "title": "Comprando no mercado"},
+          {"id": 2, "title": "Ganhando ao derrotar inimigos"},
+          {"id": 3, "title": "Desbloqueando ao subir andares"},
+          {"id": 4, "title": "Aleatoriamente no final do jogo"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Derrotar o chefe final",
+      "2": "Ganhando ao derrotar inimigos"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Evacuation",
+    "description": "Evacuation: Uma corrida contra o tempo para salvar a humanidade Evacuation é um jogo de tabuleiro que coloca os jogadores em uma situação dramática: a Terra está se tornando inabitável e a única esperança é encontrar um novo lar em outro planeta. O objetivo principal do jogo é, portanto, evacuar a população e estabelecer uma nova civilização em um novo mundo.",
+    "objective": "Gerenciar recursos, Transportar a população, Desenvolver tecnologias",
+    "icon": "evacuation.svg",
+    "category": "Sobrevivência",
+    "indication": 2,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores cooperam para se preparar para a evacuação, coletando recursos e equipamentos."
+      },
+      {
+        "step": 2,
+        "description": "Eles enfrentam eventos aleatórios e ataques alienígenas enquanto tentam sobreviver."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é evacuar com sucesso antes que a base seja destruída."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 24,
+        "title": "Qual é o objetivo do jogo?",
+        "question": [
+          {"id": 1, "title": "Eliminar todos os alienígenas"},
+          {"id": 2, "title": "Sobreviver até o fim da base"},
+          {"id": 3, "title": "Evacuar com sucesso"},
+          {"id": 4, "title": "Proteger os recursos da base"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "O que os jogadores enfrentam durante o jogo?",
+        "questions": [
+          {"id": 1, "title": "Ataques alienígenas"},
+          {"id": 2, "title": "Fome e sede"},
+          {"id": 3, "title": "Doenças misteriosas"},
+          {"id": 4, "title": "Distúrbios psicológicos"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Evacuar com sucesso",
+      "2": "Ataques alienígenas"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Descent: A Guerra do Traidor",
+    "description": "Um jogo de aventura e estratégia ambientado no universo de Descent, onde os jogadores enfrentam forças traidoras e monstros para salvar o reino.",
+    "objective": "Derrotar as forças das trevas e proteger o reino. No entanto, a Guerra do Traidor apresenta novos desafios, inimigos e uma trama mais complexa.",
+    "category": "Estratégia",
+    "icon": "descent-a-guerra-do-traidor.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem heróis e formam um time para lutar contra os traidores."
+      },
+      {
+        "step": 2,
+        "description": "Eles devem completar missões e derrotar monstros enquanto avançam na campanha."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é derrotar o líder traidor antes que o reino caia."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 22,
+        "title": "Qual é o objetivo principal do jogo?",
+        "question": [
+          {"id": 1, "title": "Salvar o reino"},
+          {"id": 2, "title": "Derrotar os traidores"},
+          {"id": 3, "title": "Completar todas as missões"},
+          {"id": 4, "title": "Explorar masmorras"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 20,
+        "title": "Quem os jogadores enfrentam?",
+        "questions": [
+          {"id": 1, "title": "Outros heróis"},
+          {"id": 2, "title": "Forças traidoras e monstros"},
+          {"id": 3, "title": "Um grande dragão"},
+          {"id": 4, "title": "Vilões aleatórios"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Derrotar os traidores",
+      "2": "Forças traidoras e monstros"
+    }
+  },
+  {
+    "id": 25,
+    "name": "For the Quest",
+    "description": "Um jogo de aventura e exploração onde os jogadores completam missões em um vasto mundo de fantasia, enfrentando desafios e inimigos enquanto buscam fama e fortuna.",
+    "objective": "O objetivo principal de For the Quest é derrotar Nokron, o Lorde das Sombras, e restaurar a paz ao reino.",
+    "category": "Aventura",
+    "icon": "for-the-quest.svg",
+    "indication": 3,
+    "rules": [
+      {
+        "step": 1,
+        "description": "Os jogadores escolhem personagens com habilidades específicas para formar uma equipe."
+      },
+      {
+        "step": 2,
+        "description": "Eles exploram o mapa, enfrentam inimigos e resolvem enigmas para completar missões."
+      },
+      {
+        "step": 3,
+        "description": "O objetivo é completar o maior número de missões e obter a maior quantidade de recompensas."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "xp": 20,
+        "title": "Qual é o objetivo principal do jogo?",
+        "question": [
+          {"id": 1, "title": "Completar missões"},
+          {"id": 2, "title": "Explorar o mapa"},
+          {"id": 3, "title": "Derrotar todos os inimigos"},
+          {"id": 4, "title": "Obter fama e fortuna"}
+        ]
+      },
+      {
+        "id": 2,
+        "xp": 18,
+        "title": "O que os jogadores fazem no jogo?",
+        "questions": [
+          {"id": 1, "title": "Lutam contra chefes poderosos"},
+          {"id": 2, "title": "Exploram o mundo e completam missões"},
+          {"id": 3, "title": "Formam alianças"},
+          {"id": 4, "title": "Colecionam itens mágicos"}
+        ]
+      }
+    ],
+    "testAnswerKey": {
+      "1": "Completar missões",
+      "2": "Exploram o mundo e completam missões"
+    }
+  }  
 ]
