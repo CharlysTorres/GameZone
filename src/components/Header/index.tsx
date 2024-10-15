@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import GamerZone from '../../assets/GameZone.svg';
+import { Dropdown } from '../Dropdown';
 
 export function Header() {
   const [iconId, setIconId] = React.useState('');
@@ -34,11 +35,12 @@ export function Header() {
       </div>
       <div className="nav-icons">
         <Link to='/'><i className='bx bx-home text-4xl hover:text-violet-500 cursor-pointer icon-header ' id='home-icon' onClick={(e) => handleClickIcon(e,'home-icon')} ></i></Link>
-        <Link to='/none'><i className='bx bx-dice-3 text-4xl hover:text-violet-500 cursor-pointer icon-header' id='bedges-icon' onClick={(e) => handleClickIcon(e,'bedges-icon')} ></i></Link>
+        <Link to='/details'><i className='bx bx-dice-3 text-4xl hover:text-violet-500 cursor-pointer icon-header' id='bedges-icon' onClick={(e) => handleClickIcon(e,'bedges-icon')} ></i></Link>
         <Link to='/leaderboard'><i className='bx bx-award text-4xl hover:text-violet-500 cursor-pointer icon-header' id='leaderboard-icon' onClick={(e) => handleClickIcon(e,'leaderboard-icon')} ></i></Link>
       </div>
       <div className="left-icon">
-      <i className='bx bxs-cog text-4xl hover:text-violet-500 cursor-pointer icon-header' id='config-icon' onClick={() => setIconId('config-icon')} ></i>
+        <Dropdown icon='bxs-cog' />
+        {/* <i className='bx bxs-cog text-4xl hover:text-violet-500 cursor-pointer icon-header' id='config-icon' onClick={() => setIconId('config-icon')} ></i> */}
       </div>
     </header>
   );

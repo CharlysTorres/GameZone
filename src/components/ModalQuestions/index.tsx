@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './styles.css';
-import { QuestionProps } from '../../@types/games';
 import { Button } from '../Button';
+import { QuestionProps } from '../../@types/games';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 interface ModalQuestionsProps {
   questions: QuestionProps[];
@@ -15,20 +16,35 @@ interface ModalQuestionsProps {
 export function ModalQuestions({questions, handleClose, testAnswerKey, gameId, gameIcon}: ModalQuestionsProps) {
   const [countQuestion, setCountQuestion] = useState(0);
   const [answer, setAnswer] = useState('');
+  const { completeChallenge } = useContext(ChallengesContext);
 
   function handleNextQuestion() {
-    if (countQuestion < questions.length - 1) {
+    if (!(countQuestion + 1 === questions.length)) {
       setCountQuestion(countQuestion + 1);
+      if (countQuestion < questions.length - 1) {
+        setCountQuestion(countQuestion + 1);
+      } else {
+        handleClose();
+      }
     } else {
       handleClose();
     }
   }
 
-  useEffect(() => {
-    if (countQuestion < questions.length - 1) {
-      setAnswer('');
+  function startChallenge() {
+    if (!(countQuestion + 1 === questions.length) || countQuestion + 1 === questions.length) {
+      const xp = questions[countQuestion].xp;
+      const questionId = questions[countQuestion].id;
+      const rightAnswer = testAnswerKey[countQuestion + 1];
+
+      if (answer === rightAnswer) {
+        completeChallenge({gameId, questionId, xp});
+      }
+      handleNextQuestion();
+    } else {
+      handleNextQuestion();
     }
-  }, [countQuestion]);
+  }
 
   return (
     <div className='modal-questions'>
@@ -58,7 +74,7 @@ export function ModalQuestions({questions, handleClose, testAnswerKey, gameId, g
         <div className='card-footer-modal-question'>
           <div className='left-content'></div>
           <div className='right-content'>
-            <Button title={'Próxima'} onClick={handleNextQuestion} disabled={!answer.length} />
+            <Button title={'Próxima'} onClick={startChallenge} disabled={!answer.length} />
           </div>
         </div>
       </div>

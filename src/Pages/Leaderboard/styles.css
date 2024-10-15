@@ -1,5 +1,6 @@
 .container-leaderboard {
-  height: 100vh;
+  height: 100%;
+  max-height: 840px;
   max-width: 992px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
@@ -148,7 +149,7 @@
     padding: 0 10px;
   }
   .container-leaderboard-item {
-    width: 300px;
+    width: 100%;
   }
 
   .sub-header-leaderboard {

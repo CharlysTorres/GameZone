@@ -23,7 +23,7 @@ export function ModalContentGame({game, closeModal, handleModalContent}: ModalCo
         <span className='text-2xl font-bold'>{game.name}</span>
         <i className='bx bx-x text-2xl cursor-pointer hover:opacity-50' onClick={closeModal}></i>
       </div>
-      <div className='content-game'>
+      <div className='content-game scroll-y-transparent'>
         <div className='about-game mb-3'>
           <b className='text-violet-500'>Sobre o jogo: </b>
           <span className='description-game font-medium'>{game.description}</span>
@@ -43,13 +43,13 @@ export function ModalContentGame({game, closeModal, handleModalContent}: ModalCo
             );
           })
         }
-        <div className='card-footer-modal'>
+      </div>
+      <div className='card-footer-modal'>
           <div className='left-content'></div>
           <div className='right-content'>
             <Button title='Aceitar Desafio' onClick={handleGoQuestions} />
           </div>
         </div>
-      </div>
     </div>
   );
 }

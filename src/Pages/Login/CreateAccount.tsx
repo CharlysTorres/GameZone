@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { Button } from "../../components/Button";
+import { toast } from 'react-toastify';
 
 interface CreateAccountProps {
   changeEmail: (value: string) => void;
@@ -25,6 +26,8 @@ export function CreateAccount({changeName, changeEmail, changePassword, handleBa
       changeEmail(email);
       changePassword(password);
     }
+
+    toast.error('Não é possivel criar uma conta no momento, por favor, tente de outra forma.');
   }
 
   return (

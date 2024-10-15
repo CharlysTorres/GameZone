@@ -1,17 +1,23 @@
 import React from 'react';
+import { useAuth } from '../../hooks/useAuth';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 export function Profile() {
+  const { user } = useAuth();
+  const { level, currentExperience } = React.useContext(ChallengesContext);
+
+
   return (
     <section className='user-container-profile'>
       <div className='card-info-profile'>
-        <img src='https://cdn3.pixelcut.app/1/3/profile_picture_1728ecf2bd.jpg' alt='User Avatar' className='user-avatar' />
+        <img src={user?.avatar} alt='User Avatar' className='user-avatar' />
         <div className='user-info'>
-          <h2 className='text-center'>Alison Santos</h2>
-          <span className='text-center'>Level 2</span>
+          <h2 className='text-center'>{user?.name}</h2>
+          <span className='text-center'>Level {(user?.level !== undefined && level < user.level) ? user?.level : level}</span>
         </div>
         <div className='xp-container'>
           <div></div>
-          <span>220 <b className='text-violet-500'>xp</b></span>
+          <span>{(user?.currentExperience !== undefined && currentExperience < user.currentExperience) ? user?.currentExperience : currentExperience} <b className='text-violet-500'>xp</b></span>
         </div>
       </div>
     </section>

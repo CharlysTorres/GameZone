@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Button } from '../../components/Button';
+import { toast } from 'react-toastify';
 
 interface CardForgotPasswordProps {
-  changeEmail: (email: string | undefined) => void; // Function to change the email state to 'forgot'
+  changeEmail: (email: string) => void; // Function to change the email state to 'forgot'
   handleForgotPassword: () => void;
   emailRecovery: () => void;
 }
@@ -22,6 +23,8 @@ export function CardForgotPassword({changeEmail, emailRecovery, handleForgotPass
     } else {
       console.error('Invalid email format');
     }
+
+    toast.error('Não é possivel recuperar a senha no momento, por favor tente mais tarde.');
   }
   
   return (

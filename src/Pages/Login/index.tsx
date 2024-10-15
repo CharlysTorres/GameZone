@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import './styles.css';
 import { CardLogin } from './CardLogin';
+import { useAuth } from '../../hooks/useAuth';
+import { CreateAccount } from './CreateAccount';
 import GameZone from '../../assets/GameZone.svg';
 import FamilyGame from '../../assets/family-game.svg';
 import { CardForgotPassword } from './CardForgotPassword';
-import { CreateAccount } from './CreateAccount';
-import { checkDevice } from '../../utils/checkDevice';
 import { toast } from 'react-toastify';
 
 interface LoginPopupProps {
@@ -17,35 +17,33 @@ interface LoginPopupProps {
 export function Login() {
   const [forgotPassword, setForgotPassword] = useState(false);
   const [createAccount, setCreateAccount] = useState(false);
-  const [email, setEmail] = useState<string | undefined>('');
-  const [password, setPassword] = useState<string | undefined>('');
-  const [name, setName] = useState<string | undefined>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  
+  const { signInWithGithub, signInWithFacebook, signInWithGoogle, signUpWithEmail } = useAuth();
 
   function handleAccountRecovery() {}
 
-  function handleCreateAccount() {}
+  async function handleCreateAccount() {
+    await signUpWithEmail(email, name, password);
+  }
 
-  const notify = () => toast('wow so easy!');
-
-  function handleLoginPopup({event, authProvider}: LoginPopupProps) {
+  async function handleLoginPopup({event, authProvider}: LoginPopupProps) {
     event.preventDefault();
-    // Implementar a função para logar o usuário
-    if (checkDevice()) {
-      switch (authProvider) {
-        case 'google':
-          // Implementar a função para logar o usuário com Google
-          break;
-        case 'facebook':
-          // Implementar a função para logar o usuário com Facebook
-          break;
-        case 'github':
-          // Implementar a função para logar o usuário com GitHub
-          break;
-        default:
-          notify();
-      }
-    } else {
-      notify();
+    switch (authProvider) {
+      case 'google':
+        await signInWithGoogle();
+        break;
+      case 'facebook':
+        // await signInWithFacebook();
+        toast.error('Provedor está indisponivel no momento.');
+        break;
+      case 'github':
+        await signInWithGithub();
+        break;
+      default:
+        break;
     }
   }
 

@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Login } from '../Pages/Login';
 import { Home } from '../Pages/Home';
 import { Leaderboard } from '../Pages/Leaderboard';
+import { Details } from '../Pages/Details';
 
 interface RouterProps {
   isLogged?: boolean;
@@ -17,6 +18,10 @@ export function Router({isLogged}: RouterProps) {
     {
       path: 'leaderboard',
       element: <Leaderboard />,
+    },
+    {
+      path: '/details',
+      element: <Details />,
     },
     {
       path: '*',

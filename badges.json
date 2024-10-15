@@ -1,0 +1,29 @@
+[
+  {
+    "id": "badge-id-1",
+    "badge": "src/assets/achievements/Badge-Achievement-5.svg",
+    "title": "Troféu de Nivel 5",
+    "description": "Conquistado ao alcançar o level 5 e mostrar seus conhecimentos nos jogos.",
+    "require": {
+      "level": 5
+    }
+  },
+  {
+    "id": "badge-id-2",
+    "badge": "src/assets/achievements/Badge-Achievement-10.svg",
+    "title": "Troféu de Nivel 10",
+    "description": "Conquistado ao alcançar o level 10 e mostrar seus conhecimentos e habilidades nos jogos.",
+    "require": {
+      "level": 10
+    }
+  },
+  {
+    "id": "badge-id-3",
+    "badge": "src/assets/achievements/Badge-level-20.svg",
+    "title": "Troféu de Nivel 20",
+    "description": "Ual, aqui você está mostrando quem realmente você é! Um player nato!",
+    "require": {
+      "level": 20
+    }
+  }
+]

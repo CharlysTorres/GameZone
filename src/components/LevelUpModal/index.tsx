@@ -1,21 +1,21 @@
 import { useContext } from 'react';
-// import { ChallengesContext } from '../contexts/ChallengesContext';
 
 import './styles.css';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 export function LevelUpModal() {
-  // const { level, closeLevelUpModal } = useContext(ChallengesContext);
+  const { level, closeLevelUpModal } = useContext(ChallengesContext);
 
   return (
     <div className='overlay'>
       <div className='container-modal-level'>
-        <header>1</header>
+        <header>{level}</header>
 
         <strong>Parabéns!</strong>
         <p>Você alcançou um novo level</p>
 
-        <button type="button">
-          <img src="/src/assets/close.svg" alt="Fechar" />
+        <button type='button' onClick={() => closeLevelUpModal()}>
+          <img src='/src/assets/close.svg' alt='Fechar' />
         </button>
       </div>
     </div>

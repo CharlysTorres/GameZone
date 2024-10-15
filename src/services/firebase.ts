@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, /* EmailAuthProvider, signInWithEmailAndPassword, createUserWithEmailAndPassword */ } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

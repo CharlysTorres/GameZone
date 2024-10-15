@@ -1,11 +1,11 @@
 
 interface LeaderboardItemProps {
-  name: string
-  completedChallanges: number
-  totalExperience: number
-  level: number
-  position: number
-  image: string
+  name: string | undefined;
+  completedChallanges: number;
+  totalExperience: number;
+  level: number;
+  position: number;
+  image: string | undefined;
 }
 
 export default function LeaderboardItem({ name, completedChallanges,

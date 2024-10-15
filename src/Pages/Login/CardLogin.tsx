@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { Button } from "../../components/Button";
+import { toast } from 'react-toastify';
 
 interface CardLoginProps {
   handleForgotPassword: () => void;
-  changeEmail: (email: string | undefined) => void;
-  changePassword: (password: string | undefined) => void;
+  changeEmail: (email: string) => void;
+  changePassword: (password: string) => void;
   handleGoCreate: () => void;
   handleLoginPopup: (e: React.MouseEvent<HTMLElement, MouseEvent>, authProvider: 'google' | 'facebook' | 'github') => void;
 }
@@ -21,6 +22,7 @@ export function CardLogin({handleForgotPassword, changeEmail, changePassword, ha
     if (passwordRef.current?.value) {
       changePassword(passwordRef.current.value);
     }
+    toast.error('Indisponivel no momento, por favor tente entrar de outra forma.');
   }
 
   return (
@@ -40,8 +42,8 @@ export function CardLogin({handleForgotPassword, changeEmail, changePassword, ha
       </div>
       <div className='social-login'>
         <i className='bx bxl-google text-4xl mx-2 text-red-600 cursor-pointer hover:opacity-50' onClick={(e) => handleLoginPopup(e, 'google')}></i>
-        <i className='bx bxl-facebook text-4xl mx-2 text-blue-600 cursor-pointer hover:opacity-50'></i>
-        <i className='bx bxl-github text-4xl mx-2 cursor-pointer hover:opacity-50'></i>
+        <i className='bx bxl-facebook text-4xl mx-2 text-blue-600 cursor-pointer hover:opacity-50' onClick={(e) => handleLoginPopup(e, 'facebook')}></i>
+        <i className='bx bxl-github text-4xl mx-2 cursor-pointer hover:opacity-50' onClick={(e) => handleLoginPopup(e, 'github')}></i>
       </div>
       <div className='signup'>
         <p>Não tem uma conta? <span className='text-violet-500 cursor-pointer hover:opacity-50' onClick={() => handleGoCreate()}>Cadastre-se</span></p>

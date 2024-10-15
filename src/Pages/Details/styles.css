@@ -1,0 +1,87 @@
+.details-profile-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-details-profile {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.profile-avatar span {
+  font-weight: 600;
+}
+
+.wrapper-profiles {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--gray-line);
+}
+
+.profile-rank {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper-achievements {
+  display: flex;
+  margin-top: 22px;
+  flex-direction: column;
+}
+
+.achievements-content img {
+  width: 65px;
+  height: 65px;
+}
+
+.achievements-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 12px;
+}
+
+.achievements-disabled {
+  filter: gray;
+  /* IE6-9 */
+  filter: grayscale(1);
+  /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.hidden {
+  display: none;
+}
