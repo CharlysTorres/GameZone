@@ -21,11 +21,11 @@ export function Login() {
   const [password, setPassword] = useState<string>('');
   const [name, setName] = useState<string>('');
   
-  const { signInWithGithub, signInWithFacebook, signInWithGoogle, signUpWithEmail } = useAuth();
+  const { signInWithGithub, signInWithGoogle, signUpWithEmail } = useAuth();
 
   function handleAccountRecovery() {}
 
-  async function handleCreateAccount() {
+  async function handleSignUpWithEmail() {
     await signUpWithEmail(email, name, password);
   }
 
@@ -75,6 +75,7 @@ export function Login() {
                   changePassword={(pass) => setPassword(pass)}
                   changeName={(name) => setName(name)}
                   handleBack={() => setCreateAccount(false)}
+                  handleSignUpWithEmail={handleSignUpWithEmail}
                 />
               :
               <CardLogin

@@ -9,7 +9,7 @@ export function Header() {
   const [iconId, setIconId] = React.useState('');
 
   function handleClickIcon(event: React.MouseEvent<HTMLElement, MouseEvent>, icon: string) {
-    // event.preventDefault();
+    event.preventDefault();
     setIconId(icon); // seta o id do elemento clicado para ficar com o active
   }
 
@@ -40,7 +40,6 @@ export function Header() {
       </div>
       <div className="left-icon">
         <Dropdown icon='bxs-cog' />
-        {/* <i className='bx bxs-cog text-4xl hover:text-violet-500 cursor-pointer icon-header' id='config-icon' onClick={() => setIconId('config-icon')} ></i> */}
       </div>
     </header>
   );

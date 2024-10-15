@@ -8,14 +8,15 @@ interface CreateAccountProps {
   changePassword: (value: string) => void;
   changeName: (value: string) => void;
   handleBack: () => void; // Implement this function to handle back navigation when 'Conecte-se' is clicked.
+  handleSignUpWithEmail: () => Promise<void>;
 }
 
-export function CreateAccount({changeName, changeEmail, changePassword, handleBack}: CreateAccountProps) {
+export function CreateAccount({changeName, changeEmail, changePassword, handleBack, handleSignUpWithEmail}: CreateAccountProps) {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
 
-  function handleCreateAccount() {
+  async function handleCreateAccount() {
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
     const name = nameRef.current?.value;
@@ -25,9 +26,10 @@ export function CreateAccount({changeName, changeEmail, changePassword, handleBa
       changeName(name);
       changeEmail(email);
       changePassword(password);
+      await handleSignUpWithEmail();
+    } else {
+      toast.error('Não é possivel criar uma conta no momento, por favor, tente de outra forma.');
     }
-
-    toast.error('Não é possivel criar uma conta no momento, por favor, tente de outra forma.');
   }
 
   return (

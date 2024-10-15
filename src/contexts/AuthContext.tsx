@@ -199,6 +199,19 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   async function signUpWithEmail(email: string, name: string, password: string) {
     const result = await createUserWithEmailAndPassword(auth, email, password);
 
+    const random = Math.floor(Math.random() * 6);
+
+    const updates = {} as {[key: string]: User};
+    updates[`users/${result.user.uid}`] = {
+      avatar: `src/assets/avataaars${random}`,
+      name,
+      id: result.user.uid,
+      level: 1,
+      currentExperience: 0,
+      challengesCompleted: 0
+    };
+    update(ref(database), updates);
+
     setUser({
       id: result.user?.uid,
       name: result.user?.displayName || '',
