@@ -1,10 +1,10 @@
-import React from 'react';
+import { useContext } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 export function Profile() {
   const { user } = useAuth();
-  const { level, currentExperience } = React.useContext(ChallengesContext);
+  const { level, currentExperience } = useContext(ChallengesContext);
 
 
   return (

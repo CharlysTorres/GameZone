@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 
 import './styles.css';
@@ -12,7 +13,7 @@ export function Home() {
   const [selectCategory, setSelectCategory] = useState<Category | null>();
 
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<React.ReactNode | null>(null);
+  const [modalContent, setModalContent] = useState<ReactNode | null>(null);
 
   function showModal() {
     setModalOpen(true);
@@ -22,7 +23,7 @@ export function Home() {
     setModalOpen(false);
   }
 
-  function handleModalContent(content: React.ReactNode) {
+  function handleModalContent(content: ReactNode) {
     setModalContent(content);
   }
 

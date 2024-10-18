@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef } from 'react';
 
 import { Button } from "../../components/Button";
 import { toast } from 'react-toastify';
@@ -11,8 +11,8 @@ interface CardLoginProps {
   handleLoginPopup: (e: React.MouseEvent<HTMLElement, MouseEvent>, authProvider: 'google' | 'facebook' | 'github') => void;
 }
 export function CardLogin({handleForgotPassword, changeEmail, changePassword, handleGoCreate, handleLoginPopup}: CardLoginProps) {
-  const emailRef = React.useRef<HTMLInputElement>(null);
-  const passwordRef = React.useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   function handleSignIn() {
     if (emailRef.current?.value) {

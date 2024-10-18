@@ -1,4 +1,4 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Popover, Whisper } from 'rsuite';
 
 import './styles.css';
@@ -9,7 +9,7 @@ import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 export function Details() {
   const { user } = useAuth();
-  const { rank } = React.useContext(ChallengesContext);
+  const { rank } = useContext(ChallengesContext);
 
   return (
     <div>
@@ -39,7 +39,7 @@ export function Details() {
                   );
                   return (
                     <Whisper placement='bottom' trigger='hover' controlId='control-id-hover' speaker={speaker} key={badge.id}>
-                      <img src={badge.badge} alt='' className={`${user?.level !== undefined ? user?.level : 1 >= badge.require.level ? '' : 'hidden'}`} />
+                      <img src={badge.badge} alt='' className={`${(user?.level !== undefined && user?.level >= badge.require.level) ? '' : 'hidden'}`} />
                     </Whisper>
                   );
                 })

@@ -931,7 +931,7 @@
         "id": 1,
         "xp": 20,
         "title": "Quantas fases tem o jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "2"},
           {"id": 2, "title": "3"},
           {"id": 3, "title": "4"},
@@ -982,7 +982,7 @@
         "id": 1,
         "xp": 22,
         "title": "Quantas escolas de bruxos existem no jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "3"},
           {"id": 2, "title": "4"},
           {"id": 3, "title": "5"},
@@ -1033,7 +1033,7 @@
         "id": 1,
         "xp": 30,
         "title": "Quantos fortes um jogador precisa controlar para vencer?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "2"},
           {"id": 2, "title": "3"},
           {"id": 3, "title": "4"},
@@ -1084,7 +1084,7 @@
         "id": 1,
         "xp": 26,
         "title": "Qual o objetivo principal do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Derrotar o império"},
           {"id": 2, "title": "Completar missões"},
           {"id": 3, "title": "Caçar recompensas"},
@@ -1135,7 +1135,7 @@
         "id": 1,
         "xp": 18,
         "title": "Quantos pontos de vida cada jogador tem no início?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "4000"},
           {"id": 2, "title": "6000"},
           {"id": 3, "title": "8000"},
@@ -1186,7 +1186,7 @@
         "id": 1,
         "xp": 25,
         "title": "Qual o objetivo principal do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Derrotar o chefe final"},
           {"id": 2, "title": "Explorar a masmorra"},
           {"id": 3, "title": "Completar a campanha cooperativamente"},
@@ -1237,7 +1237,7 @@
         "id": 1,
         "xp": 20,
         "title": "Qual o objetivo principal do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Montar o baralho mais poderoso"},
           {"id": 2, "title": "Derrotar o chefe final"},
           {"id": 3, "title": "Coletar o maior número de cartas"},
@@ -1288,7 +1288,7 @@
         "id": 1,
         "xp": 24,
         "title": "Qual é o objetivo do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Eliminar todos os alienígenas"},
           {"id": 2, "title": "Sobreviver até o fim da base"},
           {"id": 3, "title": "Evacuar com sucesso"},
@@ -1339,7 +1339,7 @@
         "id": 1,
         "xp": 22,
         "title": "Qual é o objetivo principal do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Salvar o reino"},
           {"id": 2, "title": "Derrotar os traidores"},
           {"id": 3, "title": "Completar todas as missões"},
@@ -1390,7 +1390,7 @@
         "id": 1,
         "xp": 20,
         "title": "Qual é o objetivo principal do jogo?",
-        "question": [
+        "questions": [
           {"id": 1, "title": "Completar missões"},
           {"id": 2, "title": "Explorar o mapa"},
           {"id": 3, "title": "Derrotar todos os inimigos"},

@@ -1,10 +1,10 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 import './styles.css';
 
 interface ModalProps {
   visible: boolean; // Whether the modal is visible or not.
-  content?: React.ReactNode | null;
+  content?: ReactNode | null;
 }
 
 export function Modal({visible, content}: ModalProps) {

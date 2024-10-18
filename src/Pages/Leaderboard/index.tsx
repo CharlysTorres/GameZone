@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { ref, orderByChild, query, onValue } from 'firebase/database';
 
 import './styles.css'
@@ -18,12 +18,12 @@ interface User {
 }
 
 export function Leaderboard() {
-  const { updateRank } = React.useContext(ChallengesContext);
+  const { updateRank } = useContext(ChallengesContext);
 
   const { user } = useAuth();
-  const [users, setUsers] = React.useState<User[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const usersRef = query(ref(database, 'users'), orderByChild('level'));
     onValue(usersRef, (snapshot) => {
       const usersData = snapshot.val();

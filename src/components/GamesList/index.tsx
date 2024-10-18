@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 import gameLists from './games.json';
 import { Category } from '../../@types/category';
@@ -9,7 +9,7 @@ interface GameListProps {
   selectedCategory: Category | null | undefined;
   showModal: () => void;
   closeModal: () => void; // Function to close the modal
-  handleModalContent: (content: React.ReactNode) => void;
+  handleModalContent: (content: ReactNode) => void;
 }
 
 export function GamesList({selectedCategory, showModal, handleModalContent, closeModal}: GameListProps) {

@@ -1,4 +1,6 @@
 
+import levelUp from '../../assets/level.svg'
+
 interface LeaderboardItemProps {
   name: string | undefined;
   completedChallanges: number;
@@ -20,7 +22,7 @@ export default function LeaderboardItem({ name, completedChallanges,
           style={{ backgroundImage: `url('${image}')` }}></div>
           <div className='userDescription-item'>
             <p>{name}</p>
-            <span><img src='/src/assets/level.svg' alt=''/> Level {level}</span>
+            <span><img src={levelUp} alt='level'/> Level {level}</span>
           </div>
         </div>
         <div className='challanges-item'>

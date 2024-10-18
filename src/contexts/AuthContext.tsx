@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { ref, child, get, update } from 'firebase/database';
+import { ref, child, get, update, set } from 'firebase/database';
 import { createContext, useEffect, useState, ReactNode } from 'react';
 import { signInWithPopup, signInWithRedirect, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 
@@ -42,77 +42,94 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
   const [user, setUser] = useState<User>();
   const [authLoading, setAuthLoading] = useState(true);
+  const [userLoading, setUserLoading] = useState(true);
+
+  function unsubscribe() {
+    return new Promise<User | undefined>((resolve, reject) => {
+      auth.onAuthStateChanged(user => {
+        if (user) {
+          const { displayName, photoURL, uid  } = user;
+    
+          if(!displayName || !photoURL) {
+            toast.error('Missing information from Google Account.');
+            reject(new Error('Missing information from Google Account.'));
+            throw new Error('Missing information from Google Account.');
+          }
+          resolve({
+            id: uid,
+            name: displayName,
+            avatar: photoURL,
+            level: 1,
+            currentExperience: 0,
+            challengesCompleted: 0
+          });
+        } else {
+          resolve(undefined);
+        }
+      });
+    });
+  }
 
   useEffect(() => {
-    const unsubscribe = async () => auth.onAuthStateChanged(user => {
-      if(user) {
-        const { displayName, photoURL, uid  } = user;
-  
-        if(!displayName || !photoURL) {
-          toast.error('Missing information from Google Account.');
-          throw new Error('Missing information from Google Account.');
-        }
-
-        const dbRef = ref(database);
-        get(child(dbRef, `users/${uid}`)).then((snapshot) => {
-          if (snapshot.exists()) {
-            const { level, currentExperience, challengesCompleted } = snapshot.val() as Challenges;
-            setAuthLoading(false);
-            setUser({
-              id: uid,
-              name: displayName,
-              avatar: photoURL,
-              level,
-              currentExperience,
-              challengesCompleted
-            });
-
-            const updates = {} as {[key: string]: User};
-            updates[`users/${uid}`] = {
-              avatar: photoURL,
-              name: displayName,
-              id: uid,
-              level: level ? level : 1,
-              currentExperience: currentExperience !== undefined ? currentExperience : 0,
-              challengesCompleted: challengesCompleted !== undefined ? challengesCompleted : 0
-            };
-            update(ref(database), updates);
-          } else {
-            setUser({
-              id: uid,
-              name: displayName,
-              avatar: photoURL,
-              level: 1,
-              currentExperience: 0,
-              challengesCompleted: 0
-            });
-            setAuthLoading(false);
-            console.log("No data available");
-
-            const updates = {} as {[key: string]: User};
-            updates[`users/${uid}`] = {
-              avatar: photoURL,
-              name: displayName,
-              id: uid,
-              level: 1,
-              currentExperience: 0,
-              challengesCompleted: 0
-            };
-            update(ref(database), updates);
-          }
-        }).catch((error) => {
-          toast.error(error);
-          console.error(error);
-        });
-      } else {
-        setAuthLoading(false);
-      }
-    })
-
-    return () => {
-      unsubscribe();
-    }
+    unsubscribe()
+      .then((user) => {
+        console.log('promise')
+        setUser(user);
+        setUserLoading(false);
+      }).catch(() => setUserLoading(false));
   }, []);
+
+  useEffect(() => {
+    if ((user?.avatar !== undefined && user?.id !== undefined && user?.name !== undefined) && authLoading) {
+      const dbRef = ref(database);
+      get(child(dbRef, `users/${user?.id}`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          const { level, currentExperience, challengesCompleted } = snapshot.val() as Challenges;
+          const updates = {} as {[key: string]: User};
+          updates[`users/${user.id}`] = {
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            level: level !== undefined ? level : 1,
+            currentExperience: currentExperience !== undefined ? currentExperience : 0,
+            challengesCompleted: challengesCompleted !== undefined ? challengesCompleted : 0
+          };
+          update(ref(database), updates);
+          setAuthLoading(false);
+          // update user
+          setUser({
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            level: level !== undefined ? level : 1,
+            currentExperience: currentExperience !== undefined ? currentExperience : 0,
+            challengesCompleted: challengesCompleted !== undefined ? challengesCompleted : 0
+          });
+        } else {
+          const newUser = {
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            level: 1,
+            currentExperience: 0,
+            challengesCompleted: 0
+          }
+          setAuthLoading(false);
+          // setUser(newUser);
+          set(ref(database, `users/${user.id}`), newUser);
+        }
+      }).catch((error) => {
+        toast.error(error);
+        console.error(error);
+      });
+    }
+  }, [user, userLoading, authLoading]);
+
+  useEffect(() => {
+    // if (user === undefined && userLoading) setUserLoading(false);
+
+    if (authLoading && !userLoading) setAuthLoading(false);
+  }, [user, userLoading, authLoading]);
 
   async function signInWithGoogle() {
     let result;

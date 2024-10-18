@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { Login } from '../Pages/Login';
 import { Home } from '../Pages/Home';
-import { Leaderboard } from '../Pages/Leaderboard';
+import { Login } from '../Pages/Login';
 import { Details } from '../Pages/Details';
+import { Leaderboard } from '../Pages/Leaderboard';
 
 interface RouterProps {
   isLogged?: boolean;

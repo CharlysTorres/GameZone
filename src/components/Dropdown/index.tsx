@@ -1,4 +1,3 @@
-import React from 'react';
 import { Dropdown as DropDown } from 'rsuite';
 import { WithAsProps } from 'rsuite/esm/internals/types';
 import { useAuth } from '../../hooks/useAuth';

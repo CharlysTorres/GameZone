@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 import './styles.css';
 import { GamesProps } from '../../@types/games';
@@ -8,7 +8,7 @@ import { ModalQuestions } from '../ModalQuestions';
 interface ModalContentGameProps {
   game: GamesProps;
   closeModal: () => void; // Function to close the modal
-  handleModalContent: (content: React.ReactNode) => void;
+  handleModalContent: (content: ReactNode) => void;
 }
 
 export function ModalContentGame({game, closeModal, handleModalContent}: ModalContentGameProps) {

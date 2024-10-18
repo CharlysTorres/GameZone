@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef} from 'react';
 
 import { Button } from '../../components/Button';
 import { toast } from 'react-toastify';
@@ -10,7 +10,7 @@ interface CardForgotPasswordProps {
 }
 
 export function CardForgotPassword({changeEmail, emailRecovery, handleForgotPassword}: CardForgotPasswordProps) {
-  const emailRef = React.useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
   
   function handleRecoveryPassword() {
     // Perform email validation and send password reset link

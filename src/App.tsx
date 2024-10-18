@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+
 import { Router } from './Routes';
+import { useAuth } from './hooks/useAuth';
 import { LoaderPage } from './components/LoaderPage';
 import { ChallengesProvider } from './contexts/ChallengesContext';
-import { useAuth } from './hooks/useAuth';
 
 export function App() {
   const { user, authLoading } = useAuth();
